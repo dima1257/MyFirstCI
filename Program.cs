@@ -22,4 +22,9 @@ namespace MyFirstCI
                 .UseStartup<Startup>()
                 .Build();
     }
+
+    public class HelloClass
+    {
+        public string Hello() => "Hello user #" + Guid.NewGuid();
+    }
 }

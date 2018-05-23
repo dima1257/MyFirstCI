@@ -9,7 +9,7 @@ env:
 
 script: 
     - dotnet build MyFirstCI.sln -c Release
-    - dotnet test -c Release --no-build BllTest/MyFirstCI.Test.csproj /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
+    - dotnet test -c Release --no-build MyFirstCI.Tests/MyFirstCI.Tests.csproj /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
 
 after_script:
     - bash <(curl -s https://codecov.io/bash)
